@@ -1,0 +1,268 @@
+.App {
+  text-align: center;
+  padding: 30px;
+  background-color: rgb(237, 239, 238);
+}
+
+p {
+  font-size: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+}
+
+Link{
+  text-decoration: none;
+}
+
+.intro {
+  background-color: blue;
+  min-height: 470px;
+  padding: 70px 20px;
+}
+
+.intro-btn {
+  width: 100%;
+  max-width: 200px;
+  height: 70px;
+  border: none;
+  border-radius: 5px;
+  background-color: #32A542;
+  color: white;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in;
+}
+
+.intro-btn:hover {
+  background-color: #0b006c;
+}
+
+.chem-head {
+  font-size: 5vw;
+  font-weight: bold;
+  color: white;
+}
+
+.mid {
+  display: flex;
+  flex-direction: row;
+  padding-top: 50px;
+  flex-wrap: wrap;
+}
+
+.values-title{
+  text-align: start;
+}
+
+.mid-left,
+.mid-right {
+  width: 50%;
+  text-align: start;
+}
+
+@media (min-width: 768px) {
+  .mid-left,
+  .mid-right {
+    width: 50%;
+  }
+}
+
+
+.mid-left {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.svg {
+  height: 30px;
+  width: 30px;
+}
+
+.mid-right {
+  height: 300px;
+  background-color: red;
+}
+
+.chemicals {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  background-color: aquamarine;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.specific {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  padding: 20px;
+}
+
+.specific-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+  max-width: 180px;
+  height: 60px;
+  border-radius: 5px;
+  background-color: #32A542;
+  border: none;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.specific-btn:hover {
+  background-color: #003060;
+}
+
+.subsidiaries {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.chemicals:hover {
+  background-color: blue;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.sub-title {
+  justify-content: center;
+}
+
+.mid-text {
+  color: black;
+}
+
+.hidden-text {
+  display: none;
+  color: red;
+  margin-left: 10px;
+}
+
+.hover-box:hover .hidden-text {
+  display: inline;
+}
+
+.chemtech-card {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.chemtech-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.chemtech-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.chemtech-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  text-align: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.chemtech-card:hover .chemtech-reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.chemtech-details {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+@media (max-width: 480px) {
+  .chem-head {
+    font-size: 8vw;
+  }
+
+  .chemtech-card {
+    width: 100%;
+    height: 300px;
+  }
+
+  .chemtech-details{
+    font-size: smaller;
+  }
+
+  .chemtech-title{
+    font-size: large;
+  }
+  .intro {
+    padding: 40px 15px;
+  }
+
+  .intro-btn {
+    height: 60px;
+    font-size: 16px;
+  }
+
+  .specific-btn {
+    height: 50px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .subsidiaries {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .chemtech-reveal{
+    opacity: 1;
+  }
+
+  .sub-title{
+    font-size: 1.5rem;
+    margin-top: 70px;
+    margin-bottom: -30px;
+  }
+
+  .mid{
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+}
+  .mid-left,
+  .mid-right {
+    width: 100%;
+  }
+  p{
+    font-size: 1rem;
+  }
+}

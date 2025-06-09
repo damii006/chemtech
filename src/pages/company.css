@@ -1,0 +1,237 @@
+.company-intro-small {
+    color: black;
+}
+
+.firstimg {
+    height: 520px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.company-intro {
+    display: flex;
+    padding: 100px;
+}
+
+.intro-left {
+    width: 50%;
+    padding: 20px;
+}
+
+.intro-right {
+    width: 50%;
+    padding: 20px;
+}
+
+.intro-text {
+    font-size: 70px;
+    font-weight: 80;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #32A542;
+}
+
+.mission {
+    display: flex;
+    padding: 50px;
+    padding-top: 0;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.mission-left, .mission-right {
+    outline: 0.5px solid gray;
+    margin: 50px;
+    padding: 50px;
+    flex: 1;
+}
+
+.mission-statement {
+    color: #32A542;
+}
+
+svg {
+    width: 100px;
+    height: 100px;
+}
+
+.val {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.performance {
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.values-title {
+    font-weight: 400;
+    text-align: center;
+    font-size: 50px;
+}
+
+.values {
+    padding: 50px;
+    border-bottom: 100px;
+}
+
+
+
+.management {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    background-color: #f1f1f1;
+}
+
+hr {
+    width: 200px;
+    border: none;
+    height: 2px;
+    background-color: #555;
+    margin: 20px auto;
+}
+
+
+
+h3 {
+    color: #32A542;
+}
+
+@media (max-width: 1024px) {
+    .company-intro {
+        padding: 50px;
+    }
+    
+    .intro-text {
+        font-size: 50px;
+    }
+    
+    .firstimg {
+        height: 400px;
+    }
+    
+    .mission {
+        padding: 30px;
+    }
+    
+    .mission-left, .mission-right {
+        margin: 20px;
+        padding: 30px;
+    }
+    
+    .management {
+        padding: 50px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .company-intro {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+    
+    .intro-left, .intro-right {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .intro-text {
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    .firstimg {
+        height: 250px;
+        margin-top: 20px;
+    }
+    
+    .mission {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .mission-left, .mission-right {
+        margin: 10px 0;
+        padding: 20px;
+    }
+    
+    .val {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .performance {
+        margin-bottom: 30px;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    svg {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .values {
+        padding: 30px 20px;
+    }
+    
+    .values-title {
+        font-size: 32px;
+        text-align: center;
+    }
+    
+    .management {
+        padding: 30px 20px;
+    }
+    
+    .management-title {
+        padding-top: 50px;
+        text-align: center;
+    }
+      
+    hr {
+        width: 150px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .company-intro {
+        padding: 20px 15px;
+    }
+    
+    .intro-text {
+        font-size: 32px;
+    }
+    
+    .firstimg {
+        height: 200px;
+    }
+    
+    .mission-left, .mission-right {
+        padding: 15px;
+    }
+    
+    .values {
+        padding: 20px 15px;
+    }
+    
+    .values-title {
+        font-size: 28px;
+    }
+    
+
+
+    hr {
+        width: 100px;
+    }
+}
