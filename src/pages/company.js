@@ -1,7 +1,8 @@
 import React from 'react'
 import organogram from '../resources/organogram.png';
-import hierarchy from '../resources/hierarchy.png'
 import './company.css'
+import OrgChart from '../components/OrgChart';
+
 const company = () => {
   return (
     <div>
@@ -63,18 +64,15 @@ const company = () => {
        </div>
        <div className='management'>
         <div className='organ'>
-        <img src={organogram} alt="Example" />;
+        <img className='organ-img' src={organogram} alt="Example" />
         </div>
         <div className='management-title'>
             <h1 className='values-title'>
                 Management Profile
             </h1>
             <hr/>
-         <div className='hierarchy'>
-            <img src={hierarchy} alt="Example" />
         </div>
-        </div>
-
+            <OrgChart />
        </div>
     </div>
   )

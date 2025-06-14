@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import logo from '../resources/logo.png';
 import './Navbar.css'
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -13,10 +15,17 @@ function Navbar() {
     setIsMenuOpen(false);
   };
 
+  // Function to check if a path is active
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
+
   return (
     <nav>
-      <div>
-        <h2>Chemtech</h2>
+      <div className='logo'>
+        <Link to="/" onClick={closeMenu}>
+        <img src={logo} alt="Chemtech Group Logo" className='logo-img' />
+        </Link>
       </div>
       
       <button 
@@ -32,15 +41,14 @@ function Navbar() {
       <div className={`right-nav ${isMenuOpen ? 'mobile-menu-open' : ''}`}>
         <Link to="/" onClick={closeMenu}>
           <div className='nav-item'>
-            <p className='nav-tab'>Homepage</p>
+            <p className={`nav-tab ${isActive('/') ? 'active' : ''}`}>Homepage</p>
           </div>
         </Link>
         <Link to="/company" onClick={closeMenu}>          
           <div className='nav-item'>
-            <p className='nav-tab'>The Company</p>
+            <p className={`nav-tab ${isActive('/company') ? 'active' : ''}`}>The Company</p>
           </div>
         </Link>
-
 
         <div className='nav-item' onClick={closeMenu}>
           <p className='nav-tab'>Gallery</p>
@@ -48,7 +56,7 @@ function Navbar() {
 
        <Link to="/contact" onClick={closeMenu}>
         <div className='nav-item' onClick={closeMenu}>
-          <p className='nav-tab'>Contact Us</p>
+          <p className={`nav-tab ${isActive('/contact') ? 'active' : ''}`}>Contact Us</p>
         </div>
        </Link>
       </div>

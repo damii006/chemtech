@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
   padding: 30px;
   background-color: rgb(237, 239, 238);
@@ -16,9 +16,28 @@ Link{
 }
 
 .intro {
-  background-color: blue;
+  display: flex;
+  background-image: url('../src/resources/chem-bg.jpeg'); 
+  background-size: cover;
+  background-position: center;
+  height: 400px;
   min-height: 470px;
   padding: 70px 20px;
+  justify-content: center;
+  text-align: center;
+  filter: brightness(50%);
+  align-items:center;
+  margin: -30px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  outline: none;
+  border: none;
+}
+
+.grp{
+  width: 100%;
+  justify-content: center;
+  filter: brightness(100%);
 }
 
 .intro-btn {
@@ -49,9 +68,9 @@ Link{
 
 .mid {
   display: flex;
-  flex-direction: row;
-  padding-top: 50px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
 }
 
 .values-title{
@@ -60,17 +79,23 @@ Link{
 
 .mid-left,
 .mid-right {
-  width: 50%;
+  width: 100%;
   text-align: start;
 }
 
 @media (min-width: 768px) {
+  .mid {
+    flex-direction: row;
+    padding-top: 50px;
+    align-items: flex-start;
+  }
+
   .mid-left,
   .mid-right {
     width: 50%;
+    text-align: start;
   }
 }
-
 
 .mid-left {
   display: flex;
@@ -212,6 +237,10 @@ Link{
     font-size: 8vw;
   }
 
+  .p-text{
+    font-size: 10px;
+  }
+
   .chemtech-card {
     width: 100%;
     height: 300px;
@@ -254,15 +283,248 @@ Link{
   }
 
   .mid{
-  display: flex;
-  flex-direction: column-reverse;
-  width: 100%;
-}
+    display: flex;
+    flex-direction: column-reverse;
+  }
   .mid-left,
   .mid-right {
     width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
   }
   p{
     font-size: 1rem;
+  }
+} */
+
+
+ /* --- 1. GLOBAL STYLES & CSS VARIABLES --- */
+:root {
+  --primary-color: #006400; /* A deeper, more professional green */
+  --secondary-color: #003366; /* A corporate navy blue */
+  --background-light: #f8f9fa;
+  --background-dark: #ffffff;
+  --text-light: #ffffff;
+  --text-dark: #212529;
+  --shadow-sm: 0 4px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --font-main: "Montserrat", sans-serif; /* Keep your font, it's a good choice */
+}
+
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--background-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.app-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-family: var(--font-main);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+.btn-primary:hover {
+  background-color: #004d00; 
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  width: 170px;
+  height: 70px;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+}
+
+.btn-secondary:hover {
+  background-color: #002244;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.hero-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-light);
+  background-image: url('../src/resources/chem-bg.jpeg'); /* Make sure path is correct */
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  max-width: 650px;
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2rem;
+  background-color: var(--background-dark);
+}
+
+.about-content {
+  text-align: left;
+}
+
+.about-section .section-title {
+  text-align: left;
+}
+
+.about-image {
+  margin-top: 2rem;
+  min-height: 300px;
+  width: 100%;
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+}
+
+.subsidiaries-section {
+  padding: 4rem 2rem;
+}
+
+.subsidiaries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.subsidiary-card {
+  background: var(--background-dark);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.subsidiary-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+}
+
+.card-title {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-details {
+  flex-grow: 1; 
+  color: #555;
+}
+
+.card-footer {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  align-self: flex-end;
+}
+
+
+@media (min-width: 768px) {
+  .about-section {
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .about-content, .about-image {
+    flex: 1; 
+    margin-top: 0;
+  }
+  
+  .about-image {
+    min-height: 400px;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .section-title {
+    font-size: 3rem;
+  }
+
+  .about-section, .subsidiaries-section {
+    padding: 6rem 4rem;
   }
 }
