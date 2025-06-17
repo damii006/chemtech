@@ -16,8 +16,14 @@ const OrgNode = ({ title, name, onNameClick }) => {
   );
 };
 
-const PersonModal = ({ person, isOpen, onClose }) => {
-  if (!isOpen) return null;
+const PersonModal = ({ person, staffDetails, isOpen, onClose }) => {
+  if (!isOpen || !person) return null;
+
+  const personData = staffDetails[person] || {
+    title: "Position Title",
+    image: "[Add image URL]",
+    bio: "[Add biography here]"
+  };
 
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -30,7 +36,7 @@ const PersonModal = ({ person, isOpen, onClose }) => {
           <div className="profile-section">
             <div className="profile-image-container">
               <img 
-                src="[Add image URL here]" 
+                src={personData.image} 
                 alt={person}
                 className="profile-image"
                 onError={(e) => {
@@ -45,25 +51,14 @@ const PersonModal = ({ person, isOpen, onClose }) => {
             </div>
             <div className="profile-info">
               <h2 className="profile-name">{person}</h2>
-              <p className="profile-title">[Add job title here]</p>
+              <p className="profile-title">{personData.title}</p>
             </div>
           </div>
           
-          <div className="detail-section">
-            <h3>Position Details</h3>
-            <p>[Add position details here]</p>
-          </div>
-          <div className="detail-section">
-            <h3>Experience</h3>
-            <p>[Add experience details here]</p>
-          </div>
-          <div className="detail-section">
-            <h3>Education</h3>
-            <p>[Add education details here]</p>
-          </div>
-          <div className="detail-section">
-            <h3>Contact Information</h3>
-            <p>[Add contact details here]</p>
+          <div className="bio-section">
+            <p className="bio-text">
+              {personData.bio}
+            </p>
           </div>
         </div>
       </div>
@@ -74,6 +69,39 @@ const PersonModal = ({ person, isOpen, onClose }) => {
 const OrgChart = () => {
   const [selectedPerson, setSelectedPerson] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const staffDetails = {
+    "ALHAJI ISIAKA JIMOH.": {
+      title: "Managing Director/ Executive Vice Chairman",
+      image: "[Add image URL for Alhaji Isiaka Jimoh]",
+      bio: "Alhaji Isiaka Jimoh is the entrepreneur behind the Company and all the activities. He is the Chief Executive of the company responsible for the day-to-day running of the organization and its associated services.  He holds a University degree in Science Laboratory Technology, MBA in Marketing and DBA in International Business Management.He had been in Lubricant Industry since 1986.He was formerly with Texaco Nigeria Plc as Laboratory Technologist from where he moved to Ibeto Petrochemical Industries Limited as the pioneer Laboratory Manager.  He is a member of Technical Committee on Standard for Petroleum Product with Standard Organization of Nigeria and He is Quality Lead Audit ISO 9001-2000 and a member of American Society for Testing and Material (ASTM) International."
+    },
+    "MRS. OGE NKEM CHIEKWETA.": {
+      title: "Group General Manager", 
+      image: "[Add image URL for Mrs. Oge Nkem Chiekweta]",
+      bio: "Mrs. Oge Nkem Chiekweta is currently the General Manager She is in charge Marketing and Operation of the Company. She has a Bachelor of Science and Technology degree in Industrial Chemistry from the Federal University of Technology, Owerri Imo State, and master’s degree (MSc). Analytical Chemistry from University of Lagos, Akoka, Lagos.She has over 25 years of extensive experience in the downstream sector of Petroleum Industry. She started her career as an attaché Chemist with Mobil Oil Nig. Plc, Apapa complex and her National Youth Service Scheme with Texaco Nig. Plc, Apapa Installation now MRS. She was the pioneer Assistant Chemist in Ibeto Petrochemicals Industries Limited, Nnewi, Anambra State. She joined Grand Petroleum and Chemicals Limited, Amuwo Odofin as the pioneer Plant Chemist before joining Delight as pioneer Marketing Manager where she now rose to the position of General Manager Delight Energy Ltd, she is currently combining her supervisory roles as OPS and Marketing Head, Delight Energy Ltd. Mrs. Oge is happily married."
+    },
+    "LASISI DAUDA ADETOYESE": {
+      title: "Company Accountant (Delight)",
+      image: "[Add image URL for Lasisi Dauda Adetoyese]", 
+      bio: "Lasisi Dauda Adetoyeshe was born on the 15th of March 1982 Had his OND in accounting at Moshood Abiola Polytechnic and BSc in Accounting at University of Lagos. Started his career with Chemtech Chemicals Ltd as Account officer in 2005He Joined Delight Energy Ltd as the Accountant. In 2010He then rose to be the Group Treasury Manager.Currently working as the Company Accountant.Married with Children."
+    },
+    "EHUNMOSE AKINWALE OLUJIMI": {
+      title: "Administrative Manager (Delight)",
+      image: "[Add image URL for Ehunmose Akinwale Olujimi]",
+      bio: "Ehunmose Akinwale Olujimi hails from Ondo State, Okitipupa local government area. He obtained his National Diploma in Secretarial studies from The FederalPolytechnic Bida, Niger State and his first degree in Banking and Finance fromOlabisi Onabanjo University, Ogun State in 2000 and 2008 respectively. Healso obtained his P.G.D.E in 2015.He began his working career with Chemtech Chemicals Limited in January 2013 asan Account Officer briefly and later redeployed to Administrative Departmentsame year in Chemtech Group of Companies where he served in the capacity asthe Administrative Officer up until March 2016. By April 2016, he wasredeployed to Delight Energy Limited, a subsidiary of Chemtech Group ofCompanies as Deputy Warehouse Manager.He is currently the Administrative/Human Resources Manager of Delight EnergyLimited.He is happily married with children."
+    },
+    "MRS NIKE OYEKANMI-EJEM": {
+      title: "Company Secretary/ Executive Assistant",
+      image: "[Add image URL for Mrs Nike Oyekanmi-Ejeme]",
+      bio: "Nike Oyekanmi is the Company Secretary and Executive Assistance for the group, she is Chartered Secretary and ICSA qualified.She Obtained Ordinary National Diploma in Marketing from Institute of Management and Technology, Enugu. She Joined the Group in March 2017 and has been responsible for the executive activities of the company.She earlier worked with Traditional New Concept 2016 as Business Manager, G1 International Partners between March 2013 and October 2015 as Business Development Manager.Nike is happily married with Children."
+    },
+    "WAHEED OLALEKAN JIMOH": {
+      title: "Logistics & Procurement",
+      image: "[Add image URL for Waheed Olalekan Jimoh]",
+      bio: "[Add biography for Waheed Olalekan Jimoh here - include background, experience, achievements, and responsibilities]"
+    }
+  };
 
   const handleNameClick = (name) => {
     setSelectedPerson(name);
@@ -350,6 +378,20 @@ const OrgChart = () => {
           font-style: italic;
         }
 
+        /* Bio Section Styles */
+        .bio-section {
+          margin-top: 10px;
+        }
+
+        .bio-text {
+          margin: 0;
+          color: #555;
+          line-height: 1.7;
+          font-size: 1em;
+          text-align: justify;
+          font-style: italic;
+        }
+
         @media (max-width: 600px) {
           .org-chart-row {
             flex-direction: column;
@@ -444,15 +486,43 @@ const OrgChart = () => {
 
       <div className="org-chart-row">
         <div className="column-left">
-          <OrgNode title="HEADS OF DEPARTMENT" />
+          <OrgNode title="COMPANY ACCOUNTANT (DELIGHT)" />
         </div>
         <div className="column-right">
-          <OrgNode name="" />
+          <OrgNode name="LASISI DAUDA ADETOYESE" onNameClick={handleNameClick} />
+        </div>
+      </div>
+
+      <div className="org-chart-row">
+        <div className="column-left">
+          <OrgNode title="ADMINISTRATIVE MANAGER (DELIGHT)" />
+        </div>
+        <div className="column-right">
+          <OrgNode name="EHUNMOSE AKINWALE OLUJIMI" onNameClick={handleNameClick} />
+        </div>
+      </div>
+
+      <div className="org-chart-row">
+        <div className="column-left">
+          <OrgNode title="COMPANY SECRETARY/ EXECUTIVE ASSISTANT" />
+        </div>
+        <div className="column-right">
+          <OrgNode name="MRS NIKE OYEKANMI-EJEUN" onNameClick={handleNameClick} />
+        </div>
+      </div>
+
+      <div className="org-chart-row">
+        <div className="column-left">
+          <OrgNode title="LOGISTICS & PROCUREMENT" />
+        </div>
+        <div className="column-right">
+          <OrgNode name="WAHEED OLALEKAN JIMOH" onNameClick={handleNameClick} />
         </div>
       </div>
 
       <PersonModal 
         person={selectedPerson} 
+        staffDetails={staffDetails}
         isOpen={isModalOpen} 
         onClose={closeModal} 
       />

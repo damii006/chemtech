@@ -15,7 +15,6 @@ function Navbar() {
     setIsMenuOpen(false);
   };
 
-  // Function to check if a path is active
   const isActive = (path) => {
     return location.pathname === path;
   };
@@ -39,22 +38,22 @@ function Navbar() {
       </button>
 
       <div className={`right-nav ${isMenuOpen ? 'mobile-menu-open' : ''}`}>
-        <Link to="/" onClick={closeMenu}>
+        <Link to="/" onClick={closeMenu} className='link-style'>
           <div className='nav-item'>
             <p className={`nav-tab ${isActive('/') ? 'active' : ''}`}>Homepage</p>
           </div>
         </Link>
-        <Link to="/company" onClick={closeMenu}>          
+        <Link to="/company" onClick={closeMenu} className='link-style'>          
           <div className='nav-item'>
             <p className={`nav-tab ${isActive('/company') ? 'active' : ''}`}>The Company</p>
           </div>
         </Link>
 
-        <div className='nav-item' onClick={closeMenu}>
+        <div className='nav-item' onClick={closeMenu} >
           <p className='nav-tab'>Gallery</p>
         </div>
 
-       <Link to="/contact" onClick={closeMenu}>
+       <Link to="/contact" onClick={closeMenu}className='link-style'>
         <div className='nav-item' onClick={closeMenu}>
           <p className={`nav-tab ${isActive('/contact') ? 'active' : ''}`}>Contact Us</p>
         </div>

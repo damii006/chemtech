@@ -6,13 +6,11 @@ const OfficeCard = ({ title, address, phones, email }) => {
       <h2 className="office-title">{title}</h2>
       
       <div className="office-details">
-        {/* Address */}
         <div className="contact-item">
           <span className="icon">📍</span>
           <p className="contact-text">{address}</p>
         </div>
         
-        {/* Phone Numbers */}
         {phones.map((phone, index) => (
           <div key={index} className="contact-item">
             <span className="icon">📞</span>
@@ -25,7 +23,6 @@ const OfficeCard = ({ title, address, phones, email }) => {
           </div>
         ))}
         
-        {/* Email */}
         <div className="contact-item">
           <span className="icon">✉️</span>
           <a 
@@ -57,10 +54,8 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
     console.log('Form submitted:', formData);
     alert('Thank you for your message! We will get back to you soon.');
-    // Reset form
     setFormData({
       name: '',
       phone: '',
@@ -138,18 +133,6 @@ const ContactForm = () => {
 const OfficeLocations = () => {
   const offices = [
     {
-      title: "Corporate Headquarters",
-      address: "239, Ago Palace Way, Okota, Lagos.",
-      phones: ["234-(0) 803-725-6826", "234-(0) 908-213-2444"],
-      email: "info@chemtechgroupng.com"
-    },
-    {
-      title: "Branch Office",
-      address: "Plot 17, Coca-cola Road, T.P.O 95, Ilorin, Kwara State.",
-      phones: ["234-(0) 905-484844"],
-      email: "info@chemtechgroupng.com"
-    },
-    {
       title: "Factory Office",
       address: "Along Shodunke Orimerunmu Village, Obafemi/Owode Local Govt. Area, Ogun State.",
       phones: ["234-(0) 908-213-2445", "234-(0) 908-213-2446"],
@@ -171,6 +154,11 @@ const OfficeLocations = () => {
       
       <style jsx>{`=
         .container {
+          max-width: 1200px;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+          margin: 50px;
           min-height: 100vh;
           background-color: #f5f5f5;
           padding: 2rem 1rem;
@@ -268,14 +256,14 @@ const OfficeLocations = () => {
         }
         
         .offices-grid {
-          max-width: 1200px;
-          margin: 0 auto;
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-          gap: 1.5rem;
-        }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 2rem;
+          }
         
         .office-card {
+          width: 50%;
           background: white;
           border-radius: 12px;
           padding: 2rem;

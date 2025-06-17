@@ -8,6 +8,7 @@ nav {
   position: relative;
   height: 80px;
   background-color: white;
+
 }
 
 img{
@@ -28,6 +29,7 @@ img{
 .nav-tab {
   color: black;
   margin: 0;
+  text-decoration: none;
 }
 
 .nav-tab:hover {
@@ -38,6 +40,13 @@ img{
 .nav-tab:active {
   color: #32A542;
   text-decoration: none;
+}
+
+.link-style{
+  color: black;
+  text-decoration: none;
+  color: inherit;
+
 }
 
 .nav-tab.active {
