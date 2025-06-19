@@ -5,7 +5,7 @@ import OrgChart from '../components/OrgChart';
 
 const company = () => {
   return (
-    <div>
+    <div className='company-body'>
       <h1>
         About Us
       </h1>

@@ -2,6 +2,10 @@
     color: black;
 }
 
+.company-body{
+    text-align: center;
+}
+
 .firstimg {
     height: 520px;
     width: 100%;

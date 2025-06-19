@@ -9,9 +9,6 @@ const SubsidiaryCard = ({ title, details, onClick }) => {
     <article className="subsidiary-card" onClick={onClick}>
       <h3 className="card-title">{title}</h3>
       <p className="card-details">{details}</p>
-      <div className="card-footer">
-        Learn More &rarr;
-      </div>
     </article>
   );
 };
@@ -62,7 +59,7 @@ const SubsidiariesSection = ({ subsidiaries, navigate }) => {
             key={index}
             title={sub.title}
             details={sub.details}
-            onClick={() => navigate(sub.link)}
+            // onClick={() => navigate(sub.link)}
           />
         ))}
       </div>
@@ -77,19 +74,30 @@ function App() {
   const subsidiaries = [
     {
       title: "Chemtech Chemicals Limited",
-      details: "Specializing in Manufacturer Representation, Supply and Distribution of Chemicals, Lubricating oil & Grease additives, and Industrial/Agro-allied chemicals.",
+      details: "Chemtech Chemicals Limited is a manufacturers representative and distributor of lubricating oil and grease addictives. Chemtech Chemicals Limited is a major player in the supply and distribution of other cemichals in industrial and agro-allied sector.",
       link: "/chemical"
     },
     {
       title: "Delight Energy Limited",
-      details: "A key player in the energy sector, focusing on reliable and sustainable energy solutions and distribution.",
+      details: "Delight Energy Limited is a member of chemical and pharmaceutical sector, petroleum sub-group of Manufacturers Association Of Nigeria. A key player in the energy sector, focused on lubricant production and petroleum products distribution.",
       link: "/energy"
     },
-    {
-      title: "Global Trust Investment",
-      details: "Offering robust investment and financial services, building wealth and opportunities across various sectors.",
+     {
+      title: "Chemtech Renewable And Battery Manufacturing",
+      details: "Chemtech Renewable And Battery Manufacturing is a subsidiary with focus on sustainable energy solutions, with expertise in battery manufacturing for Automotives and renwable energy systems.",
       link: "/investment"
-    }
+    },
+     {
+      title: "Chemtech Farm And Food Processing Limited",
+      details: "Chemtech Farm And Food Processing Limited is a subsidiary whose focus is on Agri-business through research and development in Agricultural processing. Chemtech Farms is creating wealth from Agricultural processes most especially from abandoned waste output of agricultural endeavours",
+      link: "/investment"
+    },
+    
+    {
+      title: "Chemtech International Ventures",
+      details: "Chemtech International Ventures serves as the dynamic trading arm of our group, specializing in international commerce, transportation, export operations, and merchandising. Our core expertise lies in mineral trading, where we leverage our extensive network to connect African mineral resources with global markets. We handle the complete supply chain from sourcing and quality assurance to logistics and international shipping.",
+      link: "/investment"
+    },
   ];
 
   return (
