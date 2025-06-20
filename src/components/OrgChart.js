@@ -436,7 +436,7 @@ const OrgChart = () => {
       `}</style>
 
       <div className="org-chart-row main-title">
-        <OrgNode title="EXECUTIVE CHAIRMAN" />
+        <OrgNode title=" CHAIRMAN" />
       </div>
 
       <div className="org-chart-row">
@@ -469,15 +469,6 @@ const OrgChart = () => {
       <div className="org-chart-row">
         <div className="column-left">
           <OrgNode title="GROUP FINANCIAL CONTROLLER" />
-        </div>
-        <div className="column-right">
-          <OrgNode name="" />
-        </div>
-      </div>
-
-      <div className="org-chart-row">
-        <div className="column-left">
-          <OrgNode title="GROUP MANAGERS- SUBSIDIARIES" />
         </div>
         <div className="column-right">
           <OrgNode name="" />

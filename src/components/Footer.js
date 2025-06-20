@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import logo from '../resources/logo.png';
 import './Footer.css'; 
 
 const Footer = () => {
@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section about">
-          <h2>Chemtech Group</h2>
+        <img src={logo} alt="Chemtech Group Logo" className='logo-img' />
           <p>
             Driving excellence across industries with innovation, quality, and integrity.
           </p>
@@ -27,7 +27,7 @@ const Footer = () => {
         <div className="footer-section contact">
           <h3>Contact</h3>
           <p>Email: info@chemtechgroupng.com</p>
-          <p>Phone: +234 803 725 6826</p>
+          <p>Phone: 234-(0) 803-725-6826</p>
         </div>
       </div>
 

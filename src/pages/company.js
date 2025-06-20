@@ -2,6 +2,7 @@ import React from 'react'
 import organogram from '../resources/organogram.png';
 import './company.css'
 import OrgChart from '../components/OrgChart';
+import RenewableEnergy from '../resources/RenewableEnergy.jpg'
 
 const company = () => {
   return (
@@ -22,7 +23,7 @@ const company = () => {
         </p>
         </div>
         <div className='intro-right'>
-            <img alt='' className='firstimg' src='https://i.imgur.com/8Q6eK6C.jpg' />
+            <img alt='' className='firstimg' src={RenewableEnergy} />
         </div>
       </div>
       <div className='mission'>

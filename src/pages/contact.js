@@ -135,7 +135,7 @@ const OfficeLocations = () => {
     {
       title: "Factory Office",
       address: "Along Shodunke Orimerunmu Village, Obafemi/Owode Local Govt. Area, Ogun State.",
-      phones: ["234-(0) 908-213-2445", "234-(0) 908-213-2446"],
+      phones: ["234-(0) 803-725-6826", "234-(0) 908-213-2446"],
       email: "info@chemtechgroupng.com"
     }
   ];
@@ -154,6 +154,7 @@ const OfficeLocations = () => {
       
       <style jsx>{`=
         .container {
+          margin-top:50px;
           max-width: 1200px;
           justify-content: center;
           display: flex;
@@ -171,8 +172,10 @@ const OfficeLocations = () => {
         }
         
         .contact-form-card {
+          margin-top:50px;
           background: white;
           border-radius: 12px;
+          margin-bottom: 2rem;
           padding: 2rem;
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
           border: 1px solid #e0e0e0;
@@ -263,6 +266,7 @@ const OfficeLocations = () => {
           }
         
         .office-card {
+          margin-top:50px;
           width: 50%;
           background: white;
           border-radius: 12px;
@@ -331,6 +335,8 @@ const OfficeLocations = () => {
           }
           
           .office-card {
+            margin-top: 50px;
+            width: 100%;
             padding: 1.5rem;
           }
           
@@ -347,6 +353,7 @@ const OfficeLocations = () => {
         /* Mobile styles */
         @media (max-width: 768px) {
           .container {
+            margin-top:50px;
             padding: 1rem 0.5rem;
           }
           
@@ -357,6 +364,7 @@ const OfficeLocations = () => {
           }
           
           .office-card {
+            width: 100%;
             padding: 1.25rem;
             margin: 0 0.25rem;
           }
@@ -388,14 +396,15 @@ const OfficeLocations = () => {
           }
         }
         
-        /* Small mobile styles */
         @media (max-width: 480px) {
           .container {
+          
             padding: 0.75rem 0.25rem;
           }
           
           .office-card {
             padding: 1rem;
+            margin-top: 50px;
             margin: 0;
           }
           

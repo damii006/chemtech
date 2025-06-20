@@ -5,7 +5,12 @@ nav {
   padding-right: 50px;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: fixed;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   height: 80px;
   background-color: white;
 
@@ -14,7 +19,9 @@ nav {
 img{
   height: 60px;
   width: 250px;
+
 }
+
 
 .right-nav {
   display: flex;
@@ -152,6 +159,7 @@ img{
 
 @media (max-width: 480px) {
   nav {
+    margin-bottom: 100px;
     padding-left: 15px;
     padding-right: 15px;
   }

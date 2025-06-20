@@ -27,6 +27,7 @@ body {
 
 .app-container {
   width: 100%;
+  margin-top: 80px;
   overflow-x: hidden;
 }
 
@@ -145,13 +146,11 @@ p {
   text-align: left;
 }
 
-.about-image {
-  margin-top: 2rem;
-  min-height: 300px;
+.imagechm {
   width: 100%;
-  background-color: var(--primary-color);
+  height: auto;
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .subsidiaries-section {
