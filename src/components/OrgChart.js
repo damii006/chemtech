@@ -81,6 +81,11 @@ const OrgChart = () => {
       image: "[Add image URL for Mrs. Oge Nkem Chiekweta]",
       bio: "Mrs. Oge Nkem Chiekweta is currently the General Manager. She is in charge Marketing and Operation of the Company. She has a Bachelor of Science and Technology degree in Industrial Chemistry from the Federal University of Technology, Owerri Imo State, and master’s degree (MSc). Analytical Chemistry from University of Lagos, Akoka, Lagos. She has over 25 years of extensive experience in the downstream sector of Petroleum Industry. She started her career as an attaché Chemist with Mobil Oil Nig. Plc, Apapa complex and her National Youth Service Scheme with Texaco Nig. Plc, Apapa Installation now MRS. She was the pioneer Assistant Chemist in Ibeto Petrochemicals Industries Limited, Nnewi, Anambra State. She joined Grand Petroleum and Chemicals Limited, Amuwo Odofin as the pioneer Plant Chemist before joining Delight as pioneer Marketing Manager where she now rose to the position of General Manager Delight Energy Ltd, she is currently combining her supervisory roles as OPS and Marketing Head, Delight Energy Ltd. Mrs. Oge is happily married."
     },
+    "MURITALA ADEYEWA": {
+      title: "HEAD MAINTENANCE",
+      image: "[Add image URL for Lasisi Dauda Adetoyese]", 
+      bio: "NO ABOUT YET."
+    },
     "LASISI DAUDA ADETOYESE": {
       title: "Company Accountant (Delight)",
       image: "[Add image URL for Lasisi Dauda Adetoyese]", 
@@ -463,6 +468,15 @@ const OrgChart = () => {
         </div>
         <div className="column-right">
           <OrgNode name="MRS. OGE NKEM CHIEKWETA." onNameClick={handleNameClick} />
+        </div>
+      </div>
+
+      <div className="org-chart-row">
+        <div className="column-left">
+          <OrgNode title="HEAD MAINTENANCE" />
+        </div>
+        <div className="column-right">
+          <OrgNode name="MURITALA ADEYEWA" onNameClick={handleNameClick} />
         </div>
       </div>
 

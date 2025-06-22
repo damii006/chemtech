@@ -49,9 +49,11 @@ function Navbar() {
           </div>
         </Link>
 
-        <div className='nav-item' onClick={closeMenu} >
-          <p className='nav-tab'>Gallery</p>
-        </div>
+        <Link to="/gallery" onClick={closeMenu} className='link-style'>          
+          <div className='nav-item'>
+            <p className={`nav-tab ${isActive('/gallery') ? 'active' : ''}`}>Gallery</p>
+          </div>
+        </Link>
 
        <Link to="/contact" onClick={closeMenu}className='link-style'>
         <div className='nav-item' onClick={closeMenu}>

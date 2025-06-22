@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Partners from './components/partners';
 import Chemtechch from './resources/Chemtechch.jpg';
 import './App.css';
@@ -22,15 +22,17 @@ const HeroSection = () => {
         <p className="hero-subtitle">
           A holding name for an indigenous conglomerate of 5 vibrant member companies, unified under the leadership of our founder, Alhaji Isiaka Adebayo Jimoh.
         </p>
+        <Link to ="/company" >
         <button className='btn btn-primary'>
           Learn More
         </button>
+        </Link>
       </div>
     </header>
   );
 };
 
-const AboutSection = () => {
+const AboutSection = ({navigate}) => {
   return (
     <section className="about-section">
       <div className="about-content">
@@ -38,13 +40,14 @@ const AboutSection = () => {
         <p>
           Chemtech Groups is dedicated to providing the highest quality products, services, and technical information to our customers. Exceptional quality starts with people wanting to be the best and comes from dedicated teamwork.
         </p>
-        <button className='btn btn-secondary'>
-          <span>ABOUT US</span>
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg>
-        </button>
+        <Link to="/company" className="about-link">
+            <button className='btn btn-secondary'>
+              <span>ABOUT US</span>
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg>
+            </button>
+        </Link>
       </div>
       <div className="about-image">
-        {/* <img className='imagechm' src='./resources/Chemtechch.jpg' alt=''></img> */}
          <img src={Chemtechch} alt="Chemtech Group Logo" className='imagechm' />
         
       </div>
@@ -62,7 +65,7 @@ const SubsidiariesSection = ({ subsidiaries, navigate }) => {
             key={index}
             title={sub.title}
             details={sub.details}
-            // onClick={() => navigate(sub.link)}
+            
           />
         ))}
       </div>

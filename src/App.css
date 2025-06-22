@@ -12,6 +12,12 @@
 }
 
 
+::selection {
+  background-color: var(--primary-color);
+  color: #ffffff
+}
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -132,10 +138,17 @@ p {
 }
 
 .about-section {
+  height: 100%;
   display: flex;
   flex-direction: column;
   padding: 4rem 2rem;
   background-color: var(--background-dark);
+}
+
+.about-link{
+  color: black;
+  text-decoration: none;
+  color: inherit;
 }
 
 .about-content {
@@ -205,9 +218,11 @@ p {
     gap: 3rem;
   }
 
+  
+
   .about-content, .about-image {
     flex: 1; 
-    margin-top: 0;
+    margin-top: 30px;
   }
   
   .about-image {
@@ -225,3 +240,14 @@ p {
     padding: 6rem 4rem;
   }
 }
+
+@media (min-width: 480px) {
+  
+ .about-content, .about-image {
+    flex: 1; 
+    margin-top: 30px;
+  }
+
+}
+
+ 
