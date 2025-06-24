@@ -16,10 +16,10 @@ const company = () => {
             Introduction
         </h1>
         <p className='company-intro-small'>
-            Chemtech Group a conglomerate with a niche, at both national and global levels in the downstream sector of the Oil and Gas, Trading,- distribution of petroleum product such as base oils diesels and kerosene. Manufacturing, Equipment supplies, Agriculture and distribution Fast Moving Consumer Goods (FMCG) with interest also in renewable power project.
+            Chemtech Group a conglomerate with a niche, at both national and global levels in the downstream sector of the Oil and Gas, Trading, importation and distribution of petroleum products such as base oils diesels and kerosene. Manufacturing, Equipment supplies, Agriculture and distribution of fast Moving Consumer Goods (FMCG) with interest also in renewable power project.
         </p>
         <p className='company-intro-small'>   
-            Our competitive edge lies in the team of experts, in the field of Trading – import and distribution, Manufacturing, Manufacturing representation of major brands in Chemicals, Lubricating oil and grease additives Laboratory equipment with strong market presence.
+            Our competitive edge lies in the team of experts, in the field of Trading – importation and distribution, Manufacturing (Manufacturing representation of major brands) in Chemicals, Lubricating oil and grease additives Laboratory equipment with strong market presence.
         </p>
         </div>
         <div className='intro-right'>

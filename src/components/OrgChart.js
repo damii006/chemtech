@@ -1,4 +1,10 @@
 import React, { useState } from 'react';
+import adetoyeshe from '../resources/adetoyeshe.jpg';
+import ehunmose from '../resources/ehunmose.jpg';
+import chiekweta from '../resources/chiekweta.jpg';
+import murtala from '../resources/murtala.jpg';
+import waheed from '../resources/waheed.jpg';
+
 
 const OrgNode = ({ title, name, onNameClick }) => {
   return (
@@ -78,22 +84,22 @@ const OrgChart = () => {
     },
     "MRS. OGE NKEM CHIEKWETA.": {
       title: "Group General Manager", 
-      image: "[Add image URL for Mrs. Oge Nkem Chiekweta]",
+      image: [chiekweta],
       bio: "Mrs. Oge Nkem Chiekweta is currently the General Manager. She is in charge Marketing and Operation of the Company. She has a Bachelor of Science and Technology degree in Industrial Chemistry from the Federal University of Technology, Owerri Imo State, and master’s degree (MSc). Analytical Chemistry from University of Lagos, Akoka, Lagos. She has over 25 years of extensive experience in the downstream sector of Petroleum Industry. She started her career as an attaché Chemist with Mobil Oil Nig. Plc, Apapa complex and her National Youth Service Scheme with Texaco Nig. Plc, Apapa Installation now MRS. She was the pioneer Assistant Chemist in Ibeto Petrochemicals Industries Limited, Nnewi, Anambra State. She joined Grand Petroleum and Chemicals Limited, Amuwo Odofin as the pioneer Plant Chemist before joining Delight as pioneer Marketing Manager where she now rose to the position of General Manager Delight Energy Ltd, she is currently combining her supervisory roles as OPS and Marketing Head, Delight Energy Ltd. Mrs. Oge is happily married."
     },
     "MURITALA ADEYEWA": {
       title: "HEAD MAINTENANCE",
-      image: "[Add image URL for Lasisi Dauda Adetoyese]", 
-      bio: "NO ABOUT YET."
+      image: [murtala], 
+      bio: "Mr Adeyewa A.Murtala is currently the Maintenance Manager of the group and has been a member since March 2007.He was born on the 20th of January,1972.He obtained his first Ordinary National Diploma in Electrical/Electronics from Abraham Adesanya polytechnic ljebu-Igbo, Ogun State Nigeria.He is happily married with kids."
     },
     "LASISI DAUDA ADETOYESE": {
       title: "Company Accountant (Delight)",
-      image: "[Add image URL for Lasisi Dauda Adetoyese]", 
+      image: [adetoyeshe], 
       bio: "Lasisi Dauda Adetoyeshe was born on the 15th of March 1982 Had his OND in accounting at Moshood Abiola Polytechnic and BSc in Accounting at University of Lagos. Started his career with Chemtech Chemicals Ltd as Account officer in 2005. He Joined Delight Energy Ltd as the Accountant in 2010, He then rose to be the Group Treasury Manager. Currently working as the Company Accountant. Married with Children."
     },
     "EHUNMOSE AKINWALE OLUJIMI": {
       title: "Administrative Manager (Delight)",
-      image: "[Add image URL for Ehunmose Akinwale Olujimi]",
+      image: [ehunmose],
       bio: "Ehunmose Akinwale Olujimi hails from Ondo State, Okitipupa local government area. He obtained his National Diploma in Secretarial studies from The FederalPolytechnic Bida, Niger State and his first degree in Banking and Finance fromOlabisi Onabanjo University, Ogun State in 2000 and 2008 respectively. Healso obtained his P.G.D.E in 2015. He began his working career with Chemtech Chemicals Limited in January 2013 asan Account Officer briefly and later redeployed to Administrative Departmentsame year in Chemtech Group of Companies where he served in the capacity asthe Administrative Officer up until March 2016. By April 2016, he wasredeployed to Delight Energy Limited, a subsidiary of Chemtech Group ofCompanies as Deputy Warehouse Manager.He is currently the Administrative/Human Resources Manager of Delight EnergyLimited.He is happily married with children."
     },
     "MRS NIKE OYEKANMI EJEM": {
@@ -103,7 +109,7 @@ const OrgChart = () => {
     },
     "WAHEED OLALEKAN JIMOH": {
       title: "Logistics & Procurement",
-      image: "[Add image URL for Waheed Olalekan Jimoh]",
+      image: [waheed],
       bio: "Mr. Waheed Olalekan Jimoh is the Logistic and Procurements Manager of the Group and has been a member of the group since June, 2007. He was born on the 5th of April, 1981. He Obtained his first Ordinary National Diploma in Electrical/Electronics from Osun state polytechnic, Osun. He also has a Higher National Diploma in Computer Engineering from Osun state polytechnic, Osun. He had his youth service in Shogom LGA, Gombe state. He also possesses a NIIT (MCSE) Certificate. He was previously a Computer Science teacher in Gombe before returning to become the current Logistics and Procurement  Manager for the group. He is happily married with children."
     }
   };

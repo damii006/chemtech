@@ -80,7 +80,7 @@ function App() {
   const subsidiaries = [
     {
       title: "Chemtech Chemicals Limited",
-      details: "Chemtech Chemicals Limited is a manufacturers representative and distributor of lubricating oil and grease addictives. Chemtech Chemicals Limited is a major player in the supply and distribution of other cemichals in industrial and agro-allied sector.",
+      details: "Chemtech Chemicals Limited is a manufacturers representative and distributor of lubricating oil and grease addictive. Chemtech Chemicals Limited is a major player in the supply and distribution of other chemicals in industrial and agro-allied sector.",
       link: "/chemical"
     },
     {
@@ -90,7 +90,7 @@ function App() {
     },
      {
       title: "Chemtech Renewable And Battery Manufacturing",
-      details: "Chemtech Renewable And Battery Manufacturing is a subsidiary with focus on sustainable energy solutions, with expertise in battery manufacturing for Automotives and renwable energy systems.",
+      details: "Chemtech Renewable And Battery Manufacturing is a subsidiary with focus on sustainable energy solutions, with expertise in battery manufacturing for Automotives and renewable energy systems.",
       link: "/investment"
     },
      {

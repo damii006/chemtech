@@ -134,8 +134,8 @@ const OfficeLocations = () => {
   const offices = [
     {
       title: "Factory Office",
-      address: "Along Shodunke Orimerunmu Village, Obafemi/Owode Local Govt. Area, Ogun State.",
-      phones: ["234-(0) 803-725-6826", "234-(0) 908-213-2446"],
+      address: "Along Sunday Shodunke Rd, by Alade Bus-Stop, off Lagos - Ibadan express way, Orimerunm village, Obafemi-Owode,  Ogun State.",
+      phones: ["234-(0) 803-725-6826"],
       email: "info@chemtechgroupng.com"
     }
   ];
