@@ -4,6 +4,7 @@ import ehunmose from '../resources/ehunmose.jpg';
 import chiekweta from '../resources/chiekweta.jpg';
 import murtala from '../resources/murtala.jpg';
 import waheed from '../resources/waheed.jpg';
+import nike from '../resources/nike.jpg'
 
 
 const OrgNode = ({ title, name, onNameClick }) => {
@@ -85,7 +86,7 @@ const OrgChart = () => {
     "MRS. OGE NKEM CHIEKWETA.": {
       title: "Group General Manager", 
       image: [chiekweta],
-      bio: "Mrs. Oge Nkem Chiekweta is currently the General Manager. She is in charge Marketing and Operation of the Company. She has a Bachelor of Science and Technology degree in Industrial Chemistry from the Federal University of Technology, Owerri Imo State, and master’s degree (MSc). Analytical Chemistry from University of Lagos, Akoka, Lagos. She has over 25 years of extensive experience in the downstream sector of Petroleum Industry. She started her career as an attaché Chemist with Mobil Oil Nig. Plc, Apapa complex and her National Youth Service Scheme with Texaco Nig. Plc, Apapa Installation now MRS. She was the pioneer Assistant Chemist in Ibeto Petrochemicals Industries Limited, Nnewi, Anambra State. She joined Grand Petroleum and Chemicals Limited, Amuwo Odofin as the pioneer Plant Chemist before joining Delight as pioneer Marketing Manager where she now rose to the position of General Manager Delight Energy Ltd, she is currently combining her supervisory roles as OPS and Marketing Head, Delight Energy Ltd. Mrs. Oge is happily married."
+      bio: "Mrs. Oge Nkem Chiekweta is currently the Group General Manager. She is in charge of Marketing and Operation of the Company. She has a Bachelor of Science and Technology degree in Industrial Chemistry from the Federal University of Technology, Owerri Imo State, and master’s degree (MSc). Analytical Chemistry from University of Lagos, Akoka, Lagos. She has over 25 years of extensive experience in the downstream sector of Petroleum Industry. She started her career as an attaché Chemist with Mobil Oil Nig. Plc, Apapa complex and her National Youth Service Scheme with Texaco Nig. Plc, Apapa Installation now MRS. She was the pioneer Assistant Chemist in Ibeto Petrochemicals Industries Limited, Nnewi, Anambra State. She joined Grand Petroleum and Chemicals Limited, Amuwo Odofin as the pioneer Plant Chemist before joining Delight as pioneer Marketing Manager where she now rose to the position of General Manager Delight Energy Ltd, she is currently combining her supervisory roles as OPS and Marketing Head, Delight Energy Ltd. Mrs. Oge is happily married."
     },
     "MURITALA ADEYEWA": {
       title: "HEAD MAINTENANCE",
@@ -104,7 +105,7 @@ const OrgChart = () => {
     },
     "MRS NIKE OYEKANMI EJEM": {
       title: "Company Secretary/Executive Assistant",
-      image: "[Add image URL for Mrs Nike Oyekanmi-Ejem]",
+      image: [nike],
       bio: "Nike Oyekanmi is the Company Secretary and Executive Assistance for the group, she is Chartered Secretary and ICSA qualified. She Obtained Ordinary National Diploma in Marketing from Institute of Management and Technology, Enugu. She Joined the Group in March 2017 and has been responsible for the executive activities of the company. She earlier worked with Traditional New Concept 2016 as Business Manager, G1 International Partners between March 2013 and October 2015 as Business Development Manager.Nike is happily married with Children."
     },
     "WAHEED OLALEKAN JIMOH": {
