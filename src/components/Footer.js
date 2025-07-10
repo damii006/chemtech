@@ -27,7 +27,7 @@ const Footer = () => {
         <div className="footer-section contact">
           <h3>Contact</h3>
           <p>Email: info@chemtechgroupng.com</p>
-          <p>Phone: 234-(0) 803-725-6826</p>
+          <p>Phone: +234-(0) 803-725-6826</p>
         </div>
       </div>
 

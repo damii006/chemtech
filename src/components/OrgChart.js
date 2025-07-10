@@ -87,7 +87,7 @@ const OrgChart = () => {
     "MRS. OGE NKEM CHIEKWETA.": {
       title: "Group General Manager", 
       image: [chiekweta],
-      bio: "Mrs. Oge Nkem Chiekweta is currently the Group General Manager. She is in charge of Marketing and Operation of the Company. She has a Bachelor of Science and Technology degree in Industrial Chemistry from the Federal University of Technology, Owerri Imo State, and master’s degree (MSc). Analytical Chemistry from University of Lagos, Akoka, Lagos. She has over 25 years of extensive experience in the downstream sector of Petroleum Industry. She started her career as an attaché Chemist with Mobil Oil Nig. Plc, Apapa complex and her National Youth Service Scheme with Texaco Nig. Plc, Apapa Installation now MRS. She was the pioneer Assistant Chemist in Ibeto Petrochemicals Industries Limited, Nnewi, Anambra State. She joined Grand Petroleum and Chemicals Limited, Amuwo Odofin as the pioneer Plant Chemist before joining Chemtech Chemicals as pioneer Marketing Manager where she rose to the position of Group Manager, she is currently combining her supervisory roles as OPS and Marketing Head, Delight Energy Ltd. Mrs. Oge is happily married."
+      bio: "Mrs. Oge Nkem Chiekweta is currently the Group General Manager. She is in charge of Marketing and Operation of the Company. She has a Bachelor of Science and Technology degree in Industrial Chemistry from the Federal University of Technology, Owerri Imo State, and master’s degree (MSc). Analytical Chemistry from University of Lagos, Akoka, Lagos. She has over 25 years of extensive experience in the downstream sector of Petroleum Industry. She started her career as an attaché Chemist with Mobil Oil Nig. Plc, Apapa complex and her National Youth Service Scheme with Texaco Nig. Plc, Apapa Installation now MRS. She was the pioneer Assistant Chemist in Ibeto Petrochemicals Industries Limited, Nnewi, Anambra State. She joined Grand Petroleum and Chemicals Limited, Amuwo Odofin as the pioneer Plant Chemist before joining Delight as pioneer Marketing Manager where she now rose to the position of General Manager Delight Energy Ltd, she is currently combining her supervisory roles as OPS and Marketing Head, Delight Energy Ltd. Mrs. Oge is happily married."
     },
     "MURITALA ADEYEWA": {
       title: "HEAD MAINTENANCE",
@@ -133,17 +133,20 @@ const OrgChart = () => {
           font-family: Arial, sans-serif;
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
+          align-items: center;
+          justify-content: center;
           padding: 20px;
           background-color: #f0f0f0;
         }
 
         .org-chart-row {
           display: flex;
-          width: 500px;
-          margin-bottom: 15px;
-          justify-content: center;
+          width: 100%;
+          max-width: 800px;
+          margin-bottom: 20px;
+          justify-content: space-between;
         }
+
 
         .org-chart-row.main-title {
           margin-bottom: 30px; 
@@ -151,10 +154,13 @@ const OrgChart = () => {
 
         .column-left,
         .column-right {
-          flex: 1;
           display: flex;
-          justify-content: center; 
+          justify-content: center;
+          align-items: center;
+          width: 300px;
+          padding: 5px;
         }
+
 
         .column-right:hover .org-node {
           transform: translateY(-8px);
@@ -163,21 +169,22 @@ const OrgChart = () => {
         }
 
         .org-node {
-          background-color: #4CAF50; 
+          background-color: #4CAF50;
           color: white;
           border-radius: 5px;
-          padding: 10px 20px;
+          padding: 15px 10px;
           text-align: center;
-          margin-left: 50px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-          width: 250px;
+          width: 100%;
+          height: auto;
+          min-height: 60px;
+          box-sizing: border-box;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          height: 60px; 
-          box-sizing: border-box; 
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
 
         .org-node .org-node-title {
           font-weight: bold;
@@ -206,16 +213,15 @@ const OrgChart = () => {
           opacity: 0.8;
         }
 
-        .column-right .org-node {
-          background-color: transparent; 
-          color: black; 
-          border: 2px solid #4CAF50; 
-          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-          box-shadow: none; 
-          padding: 10px 15px;
-          min-width: 150px;
-          font-weight: 300;
-        }
+      .column-right .org-node {
+        background-color: transparent;
+        color: black;
+        border: 2px solid #4CAF50;
+        width: 100%;
+        padding: 15px 10px;
+        font-weight: 500;
+}
+
 
         .column-right .clickable-name {
           color: black;
@@ -226,6 +232,7 @@ const OrgChart = () => {
           min-width: 250px;
         }
 
+        /* Modal Styles */
         .modal-overlay {
           position: fixed;
           top: 0;
@@ -302,6 +309,7 @@ const OrgChart = () => {
           padding: 30px;
         }
 
+        /* Profile Section Styles */
         .profile-section {
           display: flex;
           align-items: center;
@@ -458,7 +466,7 @@ const OrgChart = () => {
 
       <div className="org-chart-row">
         <div className="column-left">
-          <OrgNode title="MANANGING DIRECTOR/ EXECUTIVE VICE CHAIRMAN         " />
+          <OrgNode title="MANANGING DIRECTOR/ EXECUTIVE VICE CHAIRMAN" />
         </div>
         <div className="column-right">
           <OrgNode name="ALHAJI ISIAKA JIMOH." onNameClick={handleNameClick} />

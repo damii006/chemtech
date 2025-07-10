@@ -135,7 +135,7 @@ const OfficeLocations = () => {
     {
       title: "Factory Office",
       address: "Along Sunday Shodunke Rd, by Alade Bus-Stop, off Lagos - Ibadan express way, Orimerunm village, Obafemi-Owode,  Ogun State.",
-      phones: ["234-(0) 803-725-6826"],
+      phones: ["+234-(0) 803-725-6826"],
       email: "info@chemtechgroupng.com"
     }
   ];
