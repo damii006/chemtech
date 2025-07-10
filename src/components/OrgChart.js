@@ -5,6 +5,7 @@ import chiekweta from '../resources/chiekweta.jpg';
 import murtala from '../resources/murtala.jpg';
 import waheed from '../resources/waheed.jpg';
 import nike from '../resources/nike.jpg'
+import daddy from '../resources/daddy.jpg'
 
 
 const OrgNode = ({ title, name, onNameClick }) => {
@@ -80,7 +81,7 @@ const OrgChart = () => {
   const staffDetails = {
     "ALHAJI ISIAKA JIMOH.": {
       title: "Managing Director/ Executive Vice Chairman",
-      image: "[Add image URL for Alhaji Isiaka Jimoh]",
+      image: [daddy],
       bio: "Alhaji Isiaka Jimoh is the entrepreneur behind the Company and all the activities. He is the Chief Executive of the company responsible for the day-to-day running of the organization and its associated services.  He holds a University degree in Science Laboratory Technology, MBA in Marketing and DBA in International Business Management.He had been in Lubricant Industry since 1986.He was formerly with Texaco Nigeria Plc as Laboratory Technologist from where he moved to Ibeto Petrochemical Industries Limited as the pioneer Laboratory Manager.  He is a member of Technical Committee on Standard for Petroleum Product with Standard Organization of Nigeria and He is Quality Lead Audit ISO 9001-2000 and a member of American Society for Testing and Material (ASTM) International."
     },
     "MRS. OGE NKEM CHIEKWETA.": {
@@ -91,7 +92,7 @@ const OrgChart = () => {
     "MURITALA ADEYEWA": {
       title: "HEAD MAINTENANCE",
       image: [murtala], 
-      bio: "Mr Adeyewa A.Murtala is currently the Maintenance Manager of the group and has been a member since March 2007.He was born on the 20th of January,1972.He obtained his first Ordinary National Diploma in Electrical/Electronics from Abraham Adesanya polytechnic ljebu-Igbo, Ogun State Nigeria.He is happily married with kids."
+      bio: "Mr Adeyewa A.Murtala is currently the Maintenance Manager of the group and has been a member since March 2007.He was born on the 20th of January,1972.He obtained his first Ordinary National Diploma in Electrical/Electronics from Abraham Adesanya polytechnic ljebu-Igbo, Ogun State Nigeria.He is happily married with kids."
     },
     "LASISI DAUDA ADETOYESE": {
       title: "Company Accountant (Delight)",
@@ -132,15 +133,14 @@ const OrgChart = () => {
           font-family: Arial, sans-serif;
           display: flex;
           flex-direction: column;
-          align-items: center;
+          align-items: flex-start;
           padding: 20px;
           background-color: #f0f0f0;
         }
 
         .org-chart-row {
           display: flex;
-          width: 100%;
-          max-width: 800px; 
+          width: 500px;
           margin-bottom: 15px;
           justify-content: center;
         }
@@ -156,14 +156,21 @@ const OrgChart = () => {
           justify-content: center; 
         }
 
+        .column-right:hover .org-node {
+          transform: translateY(-8px);
+          transition: 0.5s;
+          box-shadow: var(--shadow-md);
+        }
+
         .org-node {
           background-color: #4CAF50; 
           color: white;
           border-radius: 5px;
           padding: 10px 20px;
           text-align: center;
+          margin-left: 50px;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-          min-width: 200px;
+          width: 250px;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -219,7 +226,6 @@ const OrgChart = () => {
           min-width: 250px;
         }
 
-        /* Modal Styles */
         .modal-overlay {
           position: fixed;
           top: 0;
@@ -296,7 +302,6 @@ const OrgChart = () => {
           padding: 30px;
         }
 
-        /* Profile Section Styles */
         .profile-section {
           display: flex;
           align-items: center;
@@ -453,7 +458,7 @@ const OrgChart = () => {
 
       <div className="org-chart-row">
         <div className="column-left">
-          <OrgNode title="MANANGING DIRECTOR/ EXECUTIVE VICE CHAIRMAN" />
+          <OrgNode title="MANANGING DIRECTOR/ EXECUTIVE VICE CHAIRMAN         " />
         </div>
         <div className="column-right">
           <OrgNode name="ALHAJI ISIAKA JIMOH." onNameClick={handleNameClick} />
