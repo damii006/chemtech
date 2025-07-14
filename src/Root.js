@@ -12,7 +12,6 @@ function Root() {
   return (
     <Router>
       <Navbar />
-
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/company" element={<Company />} />
